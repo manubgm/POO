@@ -1,0 +1,47 @@
+variáveis e métodos da instância:
+    • criadas na instanciação
+    • não podem ser utilizadas sem uma instância
+    • uma cópia por instância
+
+• variáveis e métodos da classe(estático):
+    • criadas na declaração da classe
+    • estão sempre disponíveis
+    • uma cópia por classe, todas as instâncias usam a mesma, uma 
+    espécie de variável global entre as instancias dessa classe
+    . usa direto o nome da classe estatic para 
+    "atualizar" dentro da instancia
+
+CONSTRUTORES
+1.Um construtor é um método tem o mesmo nome da classe 
+e é executado no instante da instanciação.
+
+ao instanciar
+
+    AnIntegerNamedX myX = new AnIntegerNamedX();
+    AnIntegerNamedX anotherX = new AnIntegerNamedX();   
+
+    um metodo construtor precisa ser o mesmo nome da classe,
+    é utilizado para inicializar alguma propriedade do objeto
+
+PASSAGEM DE PARÂMETROS EM MÉTODOS
+    • Por valor:
+    • Apenas para tipos primitivos (int, float, long, double, boolean, char)
+    • Por referência:
+    • Instâncias de classes (objetos) e vetores
+
+MENSAGENS
+Quando um objeto A “deseja” que o objeto B execute um
+método de B, o objeto A envia uma mensagem ao objeto B
+o número da marcha é o parâmetro do método engata.
+
+ENTRADA PELO TECLADO
+tem mais de uma forma
+1.usa um objeto da classe Scanner da biblioteca java.util
+
+SINTAXE
+public class TestaArgs{
+    public static void main(String args[]){ //tambem pode ser String[] args
+    
+
+    }
+}

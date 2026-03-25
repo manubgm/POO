@@ -1,0 +1,18 @@
+O que é uma instância e como se cria uma instância de uma classe em Java? 
+
+Instância é o objeto criado a partir d eum calsse.
+Primeiro a classe deve estar declardada dessa forma.
+
+public class Bobona{
+    int altura;
+    string nomecompleto;
+    void esportes(){
+        System.out.print("eu amo esportes");
+    }
+}
+
+Então instanciamos na classe main
+public static void main(){
+    Bobona leila = new Bobona();
+}
+

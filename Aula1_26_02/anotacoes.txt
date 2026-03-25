@@ -1,0 +1,40 @@
+1.não é uma disciplina de java, mas é a ferramenta usada no curso
+2. Porque Java? boa para aprender, muito utilizada no mercado,
+ela meio que obriga vc usar POO e organização pra entender 
+o paradigma não procedural, 
+3. C++ é orientada a objeto
+4. é uma linguagem meio interpretada e meio compilada
+5. .java-> compilador(javac)->bytecode-> 
+6. linguagem muito compativel entre sos
+7. funciona executando o .java e o .class
+
+comandos no  terminal
+compilar: javac nomedoarquivo.java
+
+executar: java nomedoarquivo
+java nomedaclasse
+
+na hora de compilar o codigo ofonte vai gerar um arquivo 
+.class para cada classe
+
+8.OBJETO: struct com além de atributos tem funções
+- vem do conceito de célula biológica
+- todo objeto é um ponteiro (escondido),tem que revisar a sintaxe
+- comando new é equivalente ao malloc()
+-analogia com jogos: 
+    no gta o carro é um objeto
+    o carro tem atributos (velocidade, cor, etc)
+    o carro tem métodos (acelerar, freiar, virar)
+- INSTANCIA: 
+    fazer varios objetos do tipo carro, ex: camaro, gol, celta
+    para instanciar um objeto, a classe ja deve estar bem definida
+
+
+-ENCAPSULAMENTO:
+    usando a classe carro
+    mas se os atributos estiverem expostos, voce mesmo pode mudar sem querer
+    usa os termos public ou private
+    se estiver por ex uma variavel private x, voce nao consegue mudar ela em outra classe
+    é um conceito pra ajudar a organização/encapsulamento do código como um todo
+
+

@@ -1,0 +1,9 @@
+1️⃣ Interface (O Conceito de POO)É o que estamos praticando agora no seu código. 
+É um contrato de comportamento.
+Ela define quais métodos uma classe deve ter, garantindo que objetos diferentes
+(como Circulo e Retangulo) possam ser tratados de forma padronizada
+pelo seu programa.
+Exemplo:    A interface FormaGeometrica garante que qualquer forma terá um calcularArea(),
+            não importa como o cálculo seja feito por dentro
+
+relembrar o conceito de subclasse e sobreescrite e overrides

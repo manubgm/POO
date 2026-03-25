@@ -1,0 +1,6 @@
+O que significa override em programação orientada a objetos? 
+
+É a capacidade de uma subclasse redefinir o corpo 
+de um método que foi impementado na superclasse.
+Ou seja, acontexe quando o comportamento herdado não condiz
+com as necessidades da nova classe.

@@ -1,0 +1,41 @@
+Exceptions
+
+classes para quando voce precisa tratar erros mais detalhadamente
+o programa continua pois vc ta tratando o erro
+ex: divisão por zero
+
+a Exception é um objeto
+
+try{
+    codigo em que PODE ocorrer a exceção
+}
+
+catch {
+    código de tratamento
+    o que vai acontecer SE o erro ocorrer
+}
+
+2 TIPOS DE EXCEÇÕES
+    1. descendentes da classe RunTimeException
+    não ´recisa ser tratada
+
+    2. descendentes da classe Exception
+        precisa ser tratada obrigatoriamente
+
+
+THROW
+pode lançar uma exceção ao metodo chamador
+na frente do metodo significa que o metodo PODE chamar excecoes do tipo apos o throw
+
+FINALLY
+seu uso é incomum
+funciona sempre (com ou sem exceções)
+ajuda dentro de metodos se tem varios returns, ele executa antes o FINALLY
+
+
+ate aqui foi com exceç~pes que ja existem
+
+conseguimos criar exceções a partir de outras
+Throwable
+Exception
+RunTimeException

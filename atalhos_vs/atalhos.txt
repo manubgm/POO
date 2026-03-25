@@ -1,0 +1,2 @@
+Ctrl ' abre o terminal
+Ctrl J abre e fecha o terminal

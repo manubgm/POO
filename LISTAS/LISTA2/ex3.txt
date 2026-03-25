@@ -1,0 +1,6 @@
+O que significa dizer, em Linguagem em Java, que um método está sobrecarregado? 
+
+Significa a possibilidade de se atribuir mais que uma 
+estratégia a um mesmo método.
+O compilador java reconhece como sobrecarga ao escrever dois métodos com mesmo nome
+mas usando parâmetros diferentes.
