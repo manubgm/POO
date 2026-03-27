@@ -1,0 +1,46 @@
+================================================================================
+      COLA: ORDENAÇÃO CUSTOMIZADA (POR TAMANHO DA PALAVRA) COM COLLECTIONS
+================================================================================
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+public class OrdenacaoTamanho {
+    public static void main(String[] args) {
+        
+        // A frase original
+        String frase = "colecoes em java facilitam muito a nossa vida";
+
+        // PASSO 1: Fatiar a string nos espaços usando o .split()
+        // Isso cria um vetor normal de Strings, ignorando os espaços.
+        String[] vetorPalavras = frase.split(" ");
+
+        // PASSO 2: Converter o Vetor para uma Collection (List)
+        // Usamos Arrays.asList() para fazer a mágica da conversão.
+        List<String> lista = new ArrayList<>(Arrays.asList(vetorPalavras));
+
+        // PASSO 3: Ordenar usando Collections.sort com um Comparator customizado
+        Collections.sort(lista, new Comparator<String>() {
+            @Override
+            public int compare(String p1, String p2) {
+                
+                // LÓGICA DA ORDENAÇÃO PELO TAMANHO (.length()):
+                // Como queremos DECRESCENTE (Da maior para a menor):
+                return p2.length() - p1.length();
+                
+                // OBS: Se quiséssemos CRESCENTE (Da menor para a maior), seria:
+                // return p1.length() - p2.length();
+            }
+        });
+
+        // PASSO 4: Exibir o resultado já ordenado
+        System.out.println("--- Palavras da Maior para a Menor ---");
+        for (String palavra : lista) {
+            System.out.println(palavra + " (" + palavra.length() + " letras)");
+        }
+    }
+}
+================================================================================

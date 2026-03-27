@@ -1,0 +1,91 @@
+================================================================================
+                    RESUMO DEFINITIVO: JAVA COLLECTIONS
+================================================================================
+DICA DE OURO: Para não ter que decorar cada import, use sempre:
+import java.util.*; 
+
+--------------------------------------------------------------------------------
+1. LIST (Listas) - [cite: 832, 965]
+--------------------------------------------------------------------------------
+QUANDO USAR: Quando a ordem importa e você quer acessar os itens por um índice[cite: 965]. 
+IMPLEMENTAÇÕES: 
+- ArrayList: Melhor desempenho geral[cite: 989]. Lista armazenada em vetor interno[cite: 975].
+- Vector: É ThreadSafe (pode ser usado por várias linhas de execução), mas é mais lento[cite: 988].
+- LinkedList: Armazenado em lista encadeada[cite: 977].
+
+COMO CRIAR: 
+List<String> lista = new ArrayList<String>();
+Vector<String> v = new Vector<String>(); [cite: 750]
+
+COMANDOS PRINCIPAIS:
+lista.add(valor);                // Adiciona no final [cite: 751]
+lista.insertElementAt(valor, i); // Insere na posição 'i' (usado no Vector) [cite: 752]
+lista.get(i);                    // Pega o valor da posição 'i' [cite: 754]
+lista.set(i, valor);             // Substitui o valor da posição 'i' [cite: 752]
+lista.size();                    // Retorna o tamanho da lista [cite: 753]
+lista.remove(i);                 // Apaga o item da posição 'i'
+
+--------------------------------------------------------------------------------
+2. SET (Conjuntos) - [cite: 831, 964]
+--------------------------------------------------------------------------------
+QUANDO USAR: Quando você NÃO quer itens duplicados[cite: 964].
+IMPLEMENTAÇÕES:
+- HashSet: Mais rápido, mas guarda de forma desordenada[cite: 997].
+- TreeSet: Guarda os objetos ordenados (ordem natural ou Comparator)[cite: 1041, 1042]. Mais rápido para operações básicas, O(log(n))[cite: 1043].
+
+COMO CRIAR:
+Set<String> conjunto = new TreeSet<String>(); [cite: 1200]
+
+COMANDOS PRINCIPAIS:
+conjunto.add(valor);       // Tenta adicionar. Ignora se já existir [cite: 1202]
+conjunto.remove(valor);    // Remove o item específico
+conjunto.contains(valor);  // Retorna true ou false se o item existir
+
+--------------------------------------------------------------------------------
+3. MAP (Dicionários) - [cite: 830, 966]
+--------------------------------------------------------------------------------
+QUANDO USAR: Relação Chave/Valor. Não aceita chaves duplicadas[cite: 966].
+IMPLEMENTAÇÕES:
+- HashMap: Rápido, mas as chaves ficam desordenadas[cite: 1011].
+- TreeMap: Armazena os objetos ordenados pela chave[cite: 1049, 1050].
+- Hashtable: É ThreadSafe (sincronizado)[cite: 1009].
+
+COMO CRIAR:
+Map<String, Float> mapa = new TreeMap<String, Float>(); [cite: 1245]
+
+COMANDOS PRINCIPAIS:
+mapa.put(chave, valor);    // Insere ou atualiza um par [cite: 804, 1246]
+mapa.get(chave);           // Busca o valor correspondente à chave [cite: 806, 1254]
+mapa.entrySet();           // Usado no for para percorrer o Map [cite: 1256]
+p.getKey();                // Pega a chave durante o loop [cite: 1258]
+p.getValue();              // Pega o valor durante o loop [cite: 1263]
+
+--------------------------------------------------------------------------------
+4. STACK (Pilha) e QUEUE (Fila) - [cite: 778, 1167]
+--------------------------------------------------------------------------------
+STACK (PILHA): Descendente de Vector[cite: 779]. O último a entrar é o primeiro a sair (LIFO).
+- Criar: Stack<String> pilha = new Stack<String>(); [cite: 784]
+- Comandos: 
+  pilha.push(valor); // Coloca no topo [cite: 787]
+  pilha.pop();       // Tira e retorna o topo [cite: 789]
+  pilha.empty();     // Retorna true se estiver vazia [cite: 788]
+
+QUEUE (FILA): O primeiro a entrar é o primeiro a sair (FIFO).
+- Criar: Queue<Integer> fila = new LinkedList<Integer>(); [cite: 1172]
+- Comandos:
+  fila.add(valor);   // Entra no final da fila [cite: 1173]
+  fila.poll();       // Remove e retorna o primeiro da fila [cite: 1177]
+  fila.isEmpty();    // Retorna true se estiver vazia [cite: 1175]
+
+--------------------------------------------------------------------------------
+5. ALGORITMOS DA CLASSE COLLECTIONS - [cite: 1059]
+--------------------------------------------------------------------------------
+Importação: import java.util.Collections;
+- Collections.sort(lista);         // Ordena a lista [cite: 1061, 1077]
+- Collections.reverse(lista);      // Ordena reversamente [cite: 1063]
+- Collections.shuffle(lista);      // Embaralha a lista [cite: 1062]
+- Collections.swap(lista, i, j);   // Troca dois elementos de posição [cite: 1064]
+- Collections.min(lista);          // Encontra o menor valor [cite: 1066]
+- Collections.max(lista);          // Encontra o maior valor [cite: 1066]
+- Collections.binarySearch(lista); // Busca binária [cite: 1065]
+================================================================================
