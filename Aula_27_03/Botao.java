@@ -2,7 +2,7 @@ package Aula_27_03;
 import java.awt.*;
 
 public class Botao extends Frame{
-    Button b = new Button("Aperte-me");
+    Teste1 b = new Teste1("Aperte-me");
 
     Botao(){
         super("Botao");
