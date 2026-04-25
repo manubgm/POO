@@ -1,6 +1,4 @@
 //varias classes para facilitar
-//a main estara na SystemDelivery
-package LISTAS.LISTA3;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,6 +30,12 @@ public abstract class Usuario {
         return nome;
     }
     
+    //main
+    public static void main(String[] args){
+        SystemDelivery sistema = new SystemDelivery();//criando o objeto principal
+        Menu menu = new Menu(sistema);//instanciando o menu
+        menu.iniciar();//start 
+    }
 }
 
 class Customer extends Usuario{
@@ -195,11 +199,11 @@ class SystemDelivery{
         //busca
         Customer cliEncontrado = null;
         for(Customer c : clientes){
-            if(c.getNome()==nomeCliente)cliEncontrado = c;
+            if(c.getNome().equals(nomeCliente))cliEncontrado = c;
         }
         Restaurant restEncontrado = null;
         for (Restaurant r : restaurantes) {
-            if (r.getNome() == nomeRestaurante) restEncontrado = r;
+            if (r.getNome().equals(nomeRestaurante)) restEncontrado = r;
         }
 
         if(cliEncontrado !=null && restEncontrado!=null){
@@ -216,12 +220,7 @@ class SystemDelivery{
         }
     }
 
-    //main
-    public static void main(String[] args){
-        SystemDelivery sistema = new SystemDelivery();//criando o objeto principal
-        Menu menu = new Menu(sistema);//instanciando o menu
-        menu.iniciar();//start 
-    }
+    
 }
 
 class Menu{
