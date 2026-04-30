@@ -1,0 +1,17 @@
+public class Quadrado {
+    private int x, y;
+    private int largura, altura;
+
+    public Quadrado(int x, int y, int largura, int altura) {
+        this.x = x;
+        this.y = y;
+        this.largura = largura;
+        this.altura = altura;
+    }
+
+    // Getters para o desenho
+    public int getX() { return x; }
+    public int getY() { return y; }
+    public int getLargura() { return largura; }
+    public int getAltura() { return altura; }
+}

@@ -1,0 +1,63 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Jogo extends JPanel {
+    private Quadrado quadrado;
+
+    public Jogo() {
+        setPreferredSize(new Dimension(800, 600));
+        setBackground(Color.BLACK);
+
+        // Quadrado branco de 40x40, posicionado no canto inferior da tela
+        quadrado = new Quadrado(380, 560, 40, 40);
+
+        setFocusable(true);
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        // Desenha o quadrado branco
+        g.setColor(Color.WHITE);
+        g.fillRect(quadrado.getX(), quadrado.getY(),
+                   quadrado.getLargura(), quadrado.getAltura());
+    }
+
+    public void game_loop() {
+        // TODO: Ler as teclas pressionadas e chamar os métodos
+        //       do quadrado para movimentá-lo e fazê-lo pular.
+        //
+        // Teclas disponíveis no array 'teclas':
+        //   teclas[KeyEvent.VK_LEFT]  - seta esquerda
+        //   teclas[KeyEvent.VK_RIGHT] - seta direita
+        //   teclas[KeyEvent.VK_SPACE] - espaço (pulo)
+        //
+        // Lembre-se de também atualizar a física (gravidade)
+        // e de redesenhar a tela com repaint().
+
+        repaint();
+
+        try {
+            Thread.sleep(16); // ~60 FPS
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Jogo do Quadrado");
+        Jogo jogo = new Jogo();
+        frame.add(jogo);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+
+        // Game loop
+        while (true) {
+            jogo.game_loop();
+        }
+    }
+}
